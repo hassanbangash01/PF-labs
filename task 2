@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+ 	int b;
+ 	cout<< "enter a number";
+ 	cin >> b;
+ 	if(b>10)
+ 	{
+ 		cout<<"greater than 10";
+	 }
+	 else if(b>20)
+	 {
+	 	cout<<"greater than 20";
+	 	
+	 }
+	 else
+	 cout<< "less than 10";
+	 
+ }
