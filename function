@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+ int hassan()
+{
+
+	
+	
+    int num1, num2, add,sub,mul,div;
+    cout<<"Enter Two Numbers: ";
+    cin>>num1>>num2;
+    add = num1+num2;
+    cout<<endl<<"Addition Result = "<<add<<endl;
+    sub = num1-num2;
+    cout<<endl<<"Subtraction Result = "<<sub<<endl;
+    mul = num1*num2;
+    cout<<endl<<"Multiplication Result = "<<mul<<endl;
+    div = num1/num2;
+    cout<<endl<<"Division Result = "<<div<<endl;
+
+
+	
+	
+}
+ int main(){
+ 	
+ 	
+ 	 hassan();
+ 	
+ 	return 0;
+ }
