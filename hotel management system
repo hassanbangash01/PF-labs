@@ -1,0 +1,123 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int quant;
+	int choice;
+	// quantity
+	int qrooms=0, qpasta=0, qshake=0, qchicken=0;
+	//sold
+	int srooms=0, spasta=0, sshake=0, schicken=0;
+	//price
+	int total_rooms=0, total_pasta=0, total_shake=0, total_chicken=0;
+	
+	cout<<"\n\t quantity of items we have:";
+	
+    cout<<"\nquantity of rooms we have :";
+    cin>> qrooms;
+	
+	cout<<"\nquantity of pasta we have :";
+	cin>> qpasta;
+	
+	cout<<"\nquantity of shake we have :";
+	cin>> qshake;
+	
+	cout<<"\nquantity of chicken roll we have :";
+	cin>> qchicken;
+	
+	m:
+	cout<< "\n\t\t\t please select from the menu section";
+	cout<<"\n\n1) rooms";
+	cout<<"\n2) pasta";
+	cout<<"\n3) shake ";
+	cout<<"\n4) chicken roll";
+	cout<<"\n5) info regarding sales and collection";
+	cout<<"\n6) exit";
+	
+	cout<<"\n\n please enter your choice";
+	cin>> choice;
+	
+	switch(choice){
+		
+		case 1:
+			cout<<"\n\n enter number of rooms you want";
+			cin>> quant;
+			 if (qrooms - srooms>=quant ){
+			 	srooms= srooms+quant;
+			 	total_rooms=total_rooms+quant*1200;
+				 cout<<"\n\n\t\t"<<quant<<"room/rooms have been alloted to you";
+			 }
+			 else
+			 cout<<"\nonly"<<qrooms-srooms<<"rooms remaining in hotel!";
+			 
+			 break ;
+			 
+			case 2:
+			cout<<"\n\n enter pasta quantity";
+			cin>> quant;
+			 if (qpasta - spasta>=quant ){
+			 	spasta= spasta+quant;
+			 	total_pasta=total_pasta+quant*250;
+				 cout<<"\n\n\t\t"<<quant<<"pasta is the order";
+			 }
+			 else
+			 cout<<"\n only"<<qpasta-spasta<<"pasta remaining in stock";
+			 break;
+			 
+			 	case 3:
+			cout<<"\n\n enter shake quantity";
+			cin>> quant;
+			 if (qshake - sshake>=quant ){
+			 	sshake= sshake+quant;
+			 	total_shake=total_shake+quant*150;
+				 cout<<"\n\n\t\t"<<quant<<"shake is the order";
+			 }
+			 else
+			 cout<<"\n only"<<qpasta-spasta<<"shake remaining in stock";
+			 break;
+			
+				case 4:
+			cout<<"\n\n enter chicken roll quantity";
+			cin>> quant;
+			 if (qchicken - schicken>=quant ){
+			 	schicken= schicken+quant;
+			 	total_chicken=total_chicken+quant*200;
+				 cout<<"\n\n\t\t"<<quant<<"chicken roll is the order";
+			 }
+			 else
+			 cout<<"\n only"<<qpasta-spasta<<"chicken roll remaining in stock";
+			 break;
+			
+			case 5:
+				cout<< "\n\t\t details of sales and collection";
+				cout<<"\n numbers of rooms we had "<< qrooms;
+				cout<<"\n number of rooms we gave for rent"<< srooms;
+				cout<<"\n remaining rooms"<<qrooms-srooms;
+				cout<<"\n total rooms collection for the day"<<total_rooms;
+								
+				cout<<"\n numbers of pasta we had "<< qpasta;
+				cout<<"\n number of pasta we sold"<< spasta;
+				cout<<"\n remaining pasta"<<qpasta-spasta;
+				cout<<"\n total pasta collection for the day"<<total_pasta;
+						
+				cout<<"\n numbers of shake we had "<< qshake;
+				cout<<"\n number of shakes we sold"<< sshake;
+				cout<<"\n remaining shakes"<<qshake-sshake;
+				cout<<"\n total shakes collection for the day"<<total_shake;
+				
+				cout<<"\n numbers of chicken roll we had "<< qchicken;
+				cout<<"\n number of chicken rolls we sold"<< schicken;
+				cout<<"\n remaining chicken rolls"<<qchicken-schicken;
+				cout<<"\n total chicken roll collection for the day"<<total_chicken;
+				
+				case 8:
+					exit(0);
+					
+					default:
+						cout<<"\n please select the numbers mentioned above!";	
+		
+	}
+	
+	goto m;
+	
+}
